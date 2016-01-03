@@ -23,3 +23,8 @@ x,y = kmeans2(whiten(b),10, iter=20)
 
 plt.scatter(b[:,0], b[:,1], c=y)
 plt.show()
+
+final = pd.DataFrame()
+final['GiftId'] = data['GiftId']
+final['TripId'] = kmeans2.cluster_no
+final.to_csv('submission.csv")
